@@ -1,0 +1,17 @@
+CRUD DIRECCION PARA POSTMAN TEST
+
+
+//traer todos GET
+http://apirest-php.test/prospecto/seleccionar.php
+
+//trear en espesifico GET
+http://apirest-php.test/prospecto/seleccionar.php?idProspecto=1
+
+//agregar POST
+http://apirest-php.test/prospecto/agregar.php
+
+//editar PUT
+http://apirest-php.test/prospecto/editar.php
+
+//eliminar DELETE
+http://apirest-php.test/prospecto/eliminar.php?idProspecto=3
