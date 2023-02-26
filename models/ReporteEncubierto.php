@@ -36,9 +36,29 @@
             if($resultado->num_rows){
                 while($row = $resultado->fetch_assoc()){
                     $datos[]= [
-                        'id_empresa' => $row['id_empresa'],
-                        'id_sucursal' => $row['id_sucursal'],
-                        'nombre' => $row['nombre'] 
+                        'contrasena_reporte_ecubierto' => $row['contrasena_reporte_ecubierto'],
+                        'correo' => $row['correo'],
+                        'estado' => $row['estado'],
+                        'facebook' => $row['facebook'],
+                        'gestion' => $row['gestion'],
+                        'googleplus' => $row['googleplus'],
+                        'iddireccion' => $row['iddireccion'],
+                        'idempresa' => $row['idempresa'],
+                        'idgiro' => $row['idgiro'],
+                        'idstand' => $row['idstand'],
+                        'idtest' => $row['idtest'],
+                        'idusuario' => $row['idusuario'],
+                        'linkedin' => $row['linkedin'],
+                        'nombre_comercial' => $row['nombre_comercial'],
+                        'patrocinador' => $row['patrocinador'],
+                        'razon_social' => $row['razon_social'],
+                        'RFC' => $row['RFC'],
+                        'sitio_web' => $row['sitio_web'],
+                        'telefono' => $row['telefono'],
+                        'terminos_condiciones' => $row['terminos_condiciones'],
+                        'tipo' => $row['tipo'],
+                        'twitter' => $row['twitter'],
+                        'youtube' => $row['youtube']
                     ];
                 }
             }
