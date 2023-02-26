@@ -2,12 +2,24 @@
     header('Access-Control-Allow-Origin: *');
     header("Access-Control-Allow-Headers: X-API-KEY, Origin,  Content-Type, Accept, Access-Control-Request-Method");
 
-    require_once "../models/Prospecto.php";
+    require_once "../models/ReporteEncubierto.php";
     
     $datos = json_decode(file_get_contents('php://input'));
     
     if($datos != NULL) {
-        if(Prospecto::insert($datos->nombre, $datos->apellidoPaterno, $datos->apellidoMaterno, $datos->telefono, $datos->correo, $datos->asunto, $datos->mensaje, $datos->dominioOrigen, $datos->giroDominio, $datos->categoriaProspecto, $datos->estadoSistema, $datos->conversacion)) {
+        if(ReporteEncubierto::insertReporteEncubierto(
+            $datos->id_reporte, 
+            $datos->id_empresa, 
+            $datos->id_reporte_encubierto_tipo_hecho, 
+            $datos->id_sucursal, 
+            $datos->fecha_denuncia,
+            $datos->denunciante,
+            $datos->reportado,
+            $datos->lugar,
+            $datos->archivos,
+            $datos->detalle,
+            $datos->estado
+        )) {
             echo json_encode(['insert' => TRUE]);
         }//end if
         else {

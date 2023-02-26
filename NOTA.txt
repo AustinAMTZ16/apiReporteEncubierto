@@ -1,17 +1,26 @@
-CRUD DIRECCION PARA POSTMAN TEST
+API MODULO REPORTE ENCUBIERTO PARA POSTMAN TEST
+    Funcionalidades:
+        Acceso reporte encubierto
+        Catalogo sucursales
+        Catalogo tipos de reporte
+        Listado reporte encubierto
+        Crear reporte en cubierto
+        Modificar reporte en cubierto
+        Eliminar el reporte
 
-
-//traer todos GET
-http://apirest-php.test/prospecto/seleccionar.php
-
+//accesoReporteEncubierto
+http://DOMINIO/ReporteEncubierto/accesoReporteEncubierto.php?contrasena_reporte_ecubierto=
+//catalogoSucursales
+http://DOMINIO/ReporteEncubierto/catalogoSucursales.php?id_empresa=
+//catalogoTiposReporte
+http://DOMINIO/ReporteEncubierto/catalogoTiposReporte.php
+//traer todos todos los reportes encubierto
+http://DOMINIO/ReporteEncubierto/getAllReporteEncubierto.php
 //trear en espesifico GET
-http://apirest-php.test/prospecto/seleccionar.php?idProspecto=1
-
+http://DOMINIO/ReporteEncubierto/getAllReporteEncubierto.php?idProspecto=
 //agregar POST
-http://apirest-php.test/prospecto/agregar.php
-
+http://DOMINIO/ReporteEncubierto/insertReporteEncubierto.php
 //editar PUT
-http://apirest-php.test/prospecto/editar.php
-
+http://DOMINIO/ReporteEncubierto/updateReporteEncubierto.php
 //eliminar DELETE
-http://apirest-php.test/prospecto/eliminar.php?idProspecto=3
+http://DOMINIO/ReporteEncubierto/deleteReporteEncubierto.php?idProspecto=
