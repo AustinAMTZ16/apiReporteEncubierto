@@ -15,7 +15,7 @@
 
 
 
-    if($datos != NULL) {
+    //if($datos != NULL) {
         if(ReporteEncubierto::insertReporteEncubierto(
             $datos->id_empresa, 
             $datos->id_reporte_encubierto_tipo_hecho, 
@@ -33,8 +33,8 @@
         else {
             echo json_encode(['insert' => FALSE]);
         }//end else
-    }//end if
-    else {
-        echo json_encode(['insert' => FALSE]);
-    }//end else
+    //}end if
+    //else {
+        //echo json_encode(['insert' => FALSE]);
+    //}end else
 ?>
