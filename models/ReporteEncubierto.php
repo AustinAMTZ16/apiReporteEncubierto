@@ -194,8 +194,9 @@ header("Access-Control-Allow-Methods: PUT, GET, POST");
         public static function insertReporteEncubierto($id_empresa, $id_reporte_encubierto_tipo_hecho, $id_sucursal, $fecha_denuncia, $denunciante, $reportado, $lugar, $archivos, $detalle, $estado) {
             $db = new Connection();
             
-            $archivo = basename($_FILES['archivos']['name']);
-            if(move_uploaded_file($_FILES['archivos']['tmp_name'], $archivo)){
+            $archivo = basename($_POST['archivos']['name']);
+            echo 'nam_file:',$archivo;
+            if(move_uploaded_file($_POST['archivos']['tmp_name'], $archivo)){
                 echo 'Archivo subido';
             }
 
