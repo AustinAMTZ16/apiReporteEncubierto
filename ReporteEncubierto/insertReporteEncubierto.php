@@ -5,10 +5,15 @@
     require_once "../models/ReporteEncubierto.php";
     
     $datos = json_decode(file_get_contents('php://input'));
-    $archivo = 'img/';
+
+
+    $directorio = "file/";
+    $archivo = ($_FILES["archivos"]["name"]);
     if(move_uploaded_file($_FILES["archivos"]["tmp_name"],$archivo)){
         echo 'Archivo subido';
     }
+
+
 
     if($datos != NULL) {
         if(ReporteEncubierto::insertReporteEncubierto(
