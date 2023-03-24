@@ -192,7 +192,7 @@
             $db = new Connection();
             
             $archivo = ($_FILES["archivos"]["name"]);
-            if(move_uploaded_file($_FILES["file"]["tmp_name"],$archivo)){
+            if(move_uploaded_file($_FILES["archivos"]["tmp_name"],$archivo)){
                 echo 'Archivo subido';
             }
 
