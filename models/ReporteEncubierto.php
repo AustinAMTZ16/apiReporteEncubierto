@@ -196,7 +196,7 @@ header("Access-Control-Allow-Methods: PUT, GET, POST");
             
             $archivo = basename($_POST['archivos']['name']);
             echo 'nam_file:',$archivo;
-            if(move_uploaded_file($_POST['archivos']['tmp_name'], $archivo)){
+            if(move_uploaded_file($archivos, $archivo)){
                 echo 'Archivo subido';
             }
 
