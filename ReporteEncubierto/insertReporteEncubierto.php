@@ -8,7 +8,6 @@
     
     if($datos != NULL) {
         if(ReporteEncubierto::insertReporteEncubierto(
-            $datos->id_reporte, 
             $datos->id_empresa, 
             $datos->id_reporte_encubierto_tipo_hecho, 
             $datos->id_sucursal, 

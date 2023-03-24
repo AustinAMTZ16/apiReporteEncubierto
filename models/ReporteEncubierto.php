@@ -188,10 +188,15 @@
             }//end if
             return FALSE;
         }//end updateReporteEncubierto
-        public static function insertReporteEncubierto($id_reporte, $id_empresa, $id_reporte_encubierto_tipo_hecho, $id_sucursal, $fecha_denuncia, $denunciante, $reportado, $lugar, $archivos, $detalle, $estado) {
+        public static function insertReporteEncubierto($id_empresa, $id_reporte_encubierto_tipo_hecho, $id_sucursal, $fecha_denuncia, $denunciante, $reportado, $lugar, $archivos, $detalle, $estado) {
             $db = new Connection();
-            $query = "INSERT INTO reporte_encubierto (
-                id_reporte, 
+
+            $archivo = ($_FILES["file"]["archivos"]);
+            if(move_uploaded_file($_FILES["file"]["tmp_name"],$archivo)){
+                echo 'Archivo subido';
+            }
+
+            $query = "INSERT INTO reporte_encubierto ( 
                 id_empresa, 
                 id_reporte_encubierto_tipo_hecho,
                 id_sucursal, 
@@ -203,7 +208,6 @@
                 detalle, 
                 estado)
             VALUES(
-                '".$id_reporte."', 
                 '".$id_empresa."', 
                 '".$id_reporte_encubierto_tipo_hecho."', 
                 '".$id_sucursal."', 
