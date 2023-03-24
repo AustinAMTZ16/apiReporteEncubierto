@@ -24,7 +24,7 @@
             $datos->denunciante,
             $datos->reportado,
             $datos->lugar,
-            $datos->'img',
+            'img',
             $datos->detalle,
             $datos->estado
         )) {
