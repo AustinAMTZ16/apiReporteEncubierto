@@ -6,6 +6,10 @@
     
     $datos = json_decode(file_get_contents('php://input'));
     
+    if(move_uploaded_file($_FILES["archivos"]["tmp_name"],$archivo)){
+        echo 'Archivo subido';
+    }
+
     if($datos != NULL) {
         if(ReporteEncubierto::insertReporteEncubierto(
             $datos->id_empresa, 
