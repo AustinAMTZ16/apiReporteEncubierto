@@ -190,8 +190,8 @@
         }//end updateReporteEncubierto
         public static function insertReporteEncubierto($id_empresa, $id_reporte_encubierto_tipo_hecho, $id_sucursal, $fecha_denuncia, $denunciante, $reportado, $lugar, $archivos, $detalle, $estado) {
             $db = new Connection();
-
-            $archivo = ($_FILES["file"]["archivos"]);
+            
+            $archivo = ($_FILES["archivos"]["name"]);
             if(move_uploaded_file($_FILES["file"]["tmp_name"],$archivo)){
                 echo 'Archivo subido';
             }
