@@ -13,12 +13,3 @@
         }//end __construct
     }//end class Connection
 ?>
-                <!-- '45.89.204.4', 
-                'u115254492_root2909', 
-                'AdminTrabajo2909', 
-                'u115254492_admintrabajo' -->
-
-                <!-- '66.172.11.28', 
-                'synergy', 
-                'Syn03#181', 
-                'administrabajo' -->
