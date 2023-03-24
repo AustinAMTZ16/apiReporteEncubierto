@@ -226,7 +226,7 @@ header("Access-Control-Allow-Methods: PUT, GET, POST");
             if($db->affected_rows) {
                 return TRUE;
             }//end if
-            return FALSE + $archivo;
+            return FALSE + $archivos;
         }//end insertReporteEncubierto
     }//end class Cliente
 ?>
