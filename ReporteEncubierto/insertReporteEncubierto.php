@@ -13,10 +13,7 @@
         echo 'Archivo subido';
     }
 
-
-
-    //if($datos != NULL) {
-        if(ReporteEncubierto::insertReporteEncubierto(
+    ReporteEncubierto::insertReporteEncubierto(
             $datos->id_empresa, 
             $datos->id_reporte_encubierto_tipo_hecho, 
             $datos->id_sucursal, 
@@ -27,12 +24,26 @@
             $datos->archivos,
             $datos->detalle,
             $datos->estado
-        )) {
-            echo json_encode(['insert' => TRUE]);
-        }//end if
-        else {
-            echo json_encode(['insert' => FALSE]);
-        }//end else
+    )
+
+    //if($datos != NULL) {
+        // if(ReporteEncubierto::insertReporteEncubierto(
+        //     $datos->id_empresa, 
+        //     $datos->id_reporte_encubierto_tipo_hecho, 
+        //     $datos->id_sucursal, 
+        //     $datos->fecha_denuncia,
+        //     $datos->denunciante,
+        //     $datos->reportado,
+        //     $datos->lugar,
+        //     $datos->archivos,
+        //     $datos->detalle,
+        //     $datos->estado
+        // )) {
+        //     echo json_encode(['insert' => TRUE]);
+        // }//end if
+        // else {
+        //     echo json_encode(['insert' => FALSE]);
+        // }//end else
     //}end if
     //else {
         //echo json_encode(['insert' => FALSE]);

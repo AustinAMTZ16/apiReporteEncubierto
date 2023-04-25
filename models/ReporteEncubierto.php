@@ -224,7 +224,8 @@
                 '".$estado."')";
             $db->query($query);
             if($db->affected_rows) {
-                return TRUE;
+                $id = $db->insert_id; 
+                echo json_encode($id);
             }//end if
             return FALSE;
         }//end insertReporteEncubierto
