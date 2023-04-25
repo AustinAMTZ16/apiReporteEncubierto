@@ -225,7 +225,7 @@
             $db->query($query);
             if($db->affected_rows) {
                 $last_id = $db->affected_rows;
-                return $last_id;
+                return true + $last_id;
             }//end if
             return FALSE;
         }//end insertReporteEncubierto
