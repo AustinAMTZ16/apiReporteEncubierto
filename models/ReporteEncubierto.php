@@ -224,7 +224,8 @@
                 '".$estado."')";
             $db->query($query);
             if($db->affected_rows) {
-                return TRUE;
+                $last_id = $db->affected_rows;
+                return true + $last_id;
             }//end if
             return FALSE;
         }//end insertReporteEncubierto
