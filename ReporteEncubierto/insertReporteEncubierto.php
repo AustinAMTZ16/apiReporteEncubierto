@@ -7,9 +7,9 @@
     $datos = json_decode(file_get_contents('php://input'));
 
 
-    $directorio = "file/";
+    $directorio = "./../";
     $archivo = ($_FILES["archivos"]["name"]);
-    if(move_uploaded_file($_FILES["archivos"]["tmp_name"],$archivo)){
+    if(move_uploaded_file($_FILES["archivos"]["tmp_name"],"$directorio/$archivo")){
         echo 'Archivo subido';
     }
 
